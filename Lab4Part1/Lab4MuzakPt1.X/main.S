@@ -38,19 +38,14 @@ PSECT code,class=CODE,delta=2
 Setup:
     BCF 0x03,6 ; Sets Bank 0
     BCF 0x03,5 ; Sets Bank 0
-    ; CCP1CON on power up reset is all LOW
-    ; INTCON on power up reset is all LOW
     CLRF 0x05	; Setting PORTA on reset to LOW
     CLRF 0x06	; Setting PORTB on reset to LOW
     
     BCF 0x03,6	; Sets Bank 1
     BSF 0x03,5	; Sets Bank 1
-    ; OPTION_REG on power up reset is all HIGH
     CLRF 0x85 ; Setting TRISA on reset to LOW, making PORTA an output
     MOVLW 0xFF ; Entering bits to set TRISB logic HIGH
     MOVWF 0x86 ;Setting TRISB High, making PORTB an input 
-    ; WPUB on power up reset is all HIGH
-    ; ICOB on power up reset is all HIGH
     
     BSF 0x03,6	; Sets Bank 3
     BSF 0x03,5	; Sets Bank 3
