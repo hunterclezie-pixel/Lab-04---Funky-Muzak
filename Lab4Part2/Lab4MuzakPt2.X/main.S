@@ -148,11 +148,9 @@ Note0:
     MOVWF noteIndex    
     RETURN    
 
-
 SilentOutput:
     BCF 0x05,0		; Set RA0 LOW
     GOTO Main		; Continue checking switches
-
 
 LookupTable:    
     MOVF noteIndex,W	; Move note index into W
@@ -167,7 +165,6 @@ LookupTable:
     RETLW 0x7E		; 6 - B3
     RETLW 0x77		; 7 - C4
 
-
 OutDelay:    
     MOVLW 0x04		; Load inner delay count
     MOVWF inCount	; Store inner delay count
@@ -180,6 +177,5 @@ InDelay:
     GOTO OutDelay	; Repeat outer delay
     
     RETURN		; Return when delay is complete
-    
     
 End
