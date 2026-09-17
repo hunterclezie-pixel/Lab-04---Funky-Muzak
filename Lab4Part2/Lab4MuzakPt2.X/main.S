@@ -1,6 +1,6 @@
 // Hunter Clezie
 // RCET3375
-// Lab4MuzakPt1
+// Lab4MuzakPt2
 // https://github.com/hunterclezie-pixel/Lab-04---Funky-Muzak.git
 
 ; PIC16F883 Configuration Bit Settings
